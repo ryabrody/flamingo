@@ -3,6 +3,7 @@ title: Welcome to Middleman
 ---
 
 
+
 %label{ for: 'male' } Male
 %input#male{ name: 'gender', type: 'radio', value: 'male' }
 %br
@@ -13,3 +14,14 @@ title: Welcome to Middleman
 %h1 Middleman is Running
 = svg('circle')
 
+%input{value: 'asdf'}
+%input{value: ''}
+
+%form{ action: '#svg-circle', method: 'get' }
+  %input{value: 'asdf'}
+  %input{ type: 'submit' }
+
+%form{:action => "#", :method => "get"}
+  %input#female{ name: 'gender', type: 'radio', value: 'female' }
+  %input{:name => "VARIABLE", :type => "text", :value => "VALUE"}
+  %input{:type => "submit", :value => "submit"}/
