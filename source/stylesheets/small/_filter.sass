@@ -8,17 +8,64 @@
 
 .filter-label
   display: none
+  border-radius: 1000px 1000px
+  color: transparent
+  width: 50px
+  height: 50px
+  background-color: black
+  margin: 5px 2px 
+  border: 3px solid transparent
+  box-sizing: border-box
+  cursor: pointer
 
-.filter-option
-  position: absolute
+  &[for="blue"]
+    background-color: blue
+  &[for="red"]
+    background-color: red
+  &[for="orange"]
+    background-color: orange
+  &[for="green"]
+    background-color: green
 
 #body-color:target
-  ~ .filter-label-body-color
-    display: block
+  ~ .filter
+    .filter-label-body-color
+      display: inline-block
+    .fitler-body-color
+      border-color: black
 
 #beak-color:target
-  ~ .filter-label-beak-color
-    display: block
+  ~ .filter
+    .filter-label-beak-color
+      display: inline-block
+    .filter-beak-color
+      border-color: black
+
+#legg-color:target
+  ~ .filter
+    .filter-label-legg-color
+      display: inline-block
+    .filter-legg-color
+      border-color: black
+
+#blue:checked
+  ~ #flamingo
+    .st3
+      fill: blue
+  ~ .filter
+    .filter-second-level
+      label[for="blue"]
+        border-color: black
+  
+// linker fuss: st0
+// rechter fuss: st1
+// body mittel hell: st2
+// body dunkel : st3
+// body hell : st4
+// weiss : st5
+// schnabel schwarz hell: st6
+// schnabel weiss dunkel: st7
+// schnabel schwarz dunkel: st7
 
 .filter-first-level 
   bottom: 0
@@ -26,14 +73,12 @@
   white-space: nowrap
   width: 100%
   overflow: scroll
+  a
+    display: inline-block
+
+.filter-first-level-option
+  border-bottom: 3px solid grey
 
 .filter-second-level 
   background-color: pink
   width: 100%
-
-
-a[href='#body-color'],
-a[href='#beak-color']
-  display: inline-block
-
-

@@ -2,83 +2,95 @@
 title: Welcome to Middleman
 ---
 
+%input.filter-input#blue{ name: 'body-color', type: 'radio', value: 'blue' }
+%input.filter-input#red{ name: 'body-color', type: 'radio', value: 'red' }
 
+%input.filter-input#orange{ name: 'beak-color', type: 'radio', value: 'blue' }
+%input.filter-input#green{ name: 'beak-color', type: 'radio', value: 'red' }
+
+%input.filter-input#orange{ name: 'legg-color', type: 'radio', value: 'blue' }
+%input.filter-input#green{ name: 'legg-color', type: 'radio', value: 'red' }
+
+#body-color
+#beak-color
+#legg-color
 .filter
   .filter-first-level
-    %a{ href: '#body-color', title: I18n.t('.change-body-color') }
-      = I18n.t('.change-body-color')
-    %a{ href: '#beak-color', title: I18n.t('.change-beak-color') }
-      = I18n.t('.change-beak-color')
+    %a.flamingo-icon.flamingo-icon-body-color.filter-first-level-option.fitler-body-color{ href: '#body-color', title: I18n.t('.change-body-color') }
+      = svg('flamingo_icon')
+
+    %a.flamingo-icon.flamingo-icon-beak-color.filter-first-level-option.filter-beak-color{ href: '#beak-color', title: I18n.t('.change-beak-color') }
+      = svg('flamingo_icon')
+
+    %a.flamingo-icon.flamingo-icon-legg-color.filter-first-level-option.filter-legg-color{ href: '#legg-color', title: I18n.t('.change-beak-color') }
+      = svg('flamingo_icon')
 
   .filter-second-level
-    .filter-option#body-color
     %label.filter-label.filter-label-body-color{ for: 'blue' } Blue
     %label.filter-label.filter-label-body-color{ for: 'red' } Red
 
   .filter-second-level
-    .filter-option#beak-color
     %label.filter-label.filter-label-beak-color{ for: 'orange' } Orange
     %label.filter-label.filter-label-beak-color{ for: 'green' } Green
 
-%input.filter-input.body-color#blue{ name: 'body-color', type: 'color', value: 'blue' }
-%input.filter-input#red{ name: 'body-color', type: 'color', value: 'red' }
+  .filter-second-level
+    %label.filter-label.filter-label-legg-color{ for: 'dumdidum' } dumdium
+    %label.filter-label.filter-label-legg-color{ for: 'asdf' } asdf
 
-%input.filter-input#orange{ name: 'beak-color', type: 'color', value: 'blue' }
-%input.filter-input#green{ name: 'beak-color', type: 'color', value: 'red' }
 = svg('flamingo')
 <a href="http://www.freepik.com/free-vector/pack-of-tropical-birds_867951.htm">Designed by Freepik</a>
 
 
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-%br
-// linker fuss: st0
-// rechter fuss: st1
-// body mittel hell: st2
-// body dunkel : st3
-// body hell : st4
-// weiss : st5
-// schnabel schwarz hell: st6
-// schnabel weiss dunkel: st7
-// schnabel schwarz dunkel: st7
-
-
-
-.container
-  %label{ for: 'male' } Male
-  %label{ for: 'female' } Female
-
-%input#male{ name: 'gender', type: 'radio', value: 'male' }
-%br
-%input#female{ name: 'gender', type: 'radio', value: 'female' }
-%br
-= svg('circle')
-
-:css
-  #dumdidum:checked ~ h1 {
-    color: orange;
-  }
-
-
-//%input#dumdidum{ name: 'dumdidum', type: 'checkbox', value: 'dumdidum' }
-//%h1 Middleman is Running
-//= Base64.encode64(File.read("#{Middleman::Application.root}/source/images/example.svg"))
-////%img{ src: "data:image/svg+xml; #{)}" }
-  
-
-%input{value: 'asdf'}
-%input{value: ''}
-
-%form{ action: '#svg-circle', method: 'get' }
-  %input{value: 'asdf'}
-  %input{ type: 'submit' }
-
-%form{:action => "#", :method => "get"}
-  %input#female{ name: 'gender', type: 'radio', value: 'female' }
-  %input{:name => "VARIABLE", :type => "text", :value => "VALUE"}
-  %input{:type => "submit", :value => "submit"}/
+//%br
+//%br
+//%br
+//%br
+//%br
+//%br
+//%br
+//%br
+//// linker fuss: st0
+//// rechter fuss: st1
+//// body mittel hell: st2
+//// body dunkel : st3
+//// body hell : st4
+//// weiss : st5
+//// schnabel schwarz hell: st6
+//// schnabel weiss dunkel: st7
+//// schnabel schwarz dunkel: st7
+//
+//
+//
+//.container
+//  %label{ for: 'male' } Male
+//  %label{ for: 'female' } Female
+//
+//%input#male{ name: 'gender', type: 'radio', value: 'male' }
+//%br
+//%input#female{ name: 'gender', type: 'radio', value: 'female' }
+//%br
+//= svg('circle')
+//
+//:css
+//  #dumdidum:checked ~ h1 {
+//    color: orange;
+//  }
+//
+//
+////%input#dumdidum{ name: 'dumdidum', type: 'checkbox', value: 'dumdidum' }
+////%h1 Middleman is Running
+////= Base64.encode64(File.read("#{Middleman::Application.root}/source/images/example.svg"))
+//////%img{ src: "data:image/svg+xml; #{)}" }
+//  
+//
+//%input{value: 'asdf'}
+//%input{value: ''}
+//
+//%form{ action: '#svg-circle', method: 'get' }
+//  %input{value: 'asdf'}
+//  %input{ type: 'submit' }
+//
+//%form{:action => "#", :method => "get"}
+//  %input#female{ name: 'gender', type: 'radio', value: 'female' }
+//  %input{:name => "VARIABLE", :type => "text", :value => "VALUE"}
+//  %input{:type => "submit", :value => "submit"}/
