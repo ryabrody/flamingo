@@ -1,4 +1,5 @@
 require 'base64'
+require 'pry'
 ###
 # Page options, layouts, aliases and proxies
 ###

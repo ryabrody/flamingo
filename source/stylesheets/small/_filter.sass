@@ -1,0 +1,39 @@
+.filter
+  position: fixed
+  width: 100%
+  bottom: 0
+
+.filter-input
+  display: none
+
+.filter-label
+  display: none
+
+.filter-option
+  position: absolute
+
+#body-color:target
+  ~ .filter-label-body-color
+    display: block
+
+#beak-color:target
+  ~ .filter-label-beak-color
+    display: block
+
+.filter-first-level 
+  bottom: 0
+  background-color: white
+  white-space: nowrap
+  width: 100%
+  overflow: scroll
+
+.filter-second-level 
+  background-color: pink
+  width: 100%
+
+
+a[href='#body-color'],
+a[href='#beak-color']
+  display: inline-block
+
+
