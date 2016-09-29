@@ -1,22 +1,83 @@
 .filter
   position: fixed
   width: 100%
+  left: 0
   bottom: 0
 
 .filter-input
   display: none
 
+.filter-first-level-option
+  display: inline-block
+  vertical-align: middle
+  
+
+.filter-first-level-option-target
+  height: 15vh
+  width: 15vh
+  border-bottom: none
+  border-color: $pink
+  &:after
+    display: block
+
+#body-color:target
+  ~ .filter
+    .filter-label-body-color
+      display: inline-block
+    .fitler-body-color
+      @extend .filter-first-level-option-target
+
+#beak-color:target
+  ~ .filter
+    .filter-label-beak-color
+      display: inline-block
+    .filter-beak-color
+      @extend .filter-first-level-option-target
+
+#leggs-color:target
+  ~ .filter
+    .filter-label-leggs-color
+      display: inline-block
+    .filter-leggs-color
+      @extend .filter-first-level-option-target
+
+.filter-first-level 
+  bottom: 0
+  white-space: nowrap
+  width: 100%
+  overflow-x: scroll
+  overflow-y: hidden
+  padding: 0 10px
+  text-align: center
+  box-sizing: border-box
+  a
+    display: inline-block
+
+.filter-first-level-option
+  border: 2px solid $grey-light
+  height: 10vh
+  width: 10vh
+
+.filter-second-level 
+  background-color: $pink
+  width: 100%
+  padding: 0px 10px
+  text-align: center
+  box-sizing: border-box
+
+
 .filter-label
   display: none
   border-radius: 1000px 1000px
   color: transparent
-  width: 25px
-  height: 25px
+  width: 30px
+  height: 30px
   background-color: black
-  margin: 5px 2px 
-  border: 3px solid transparent
+  margin: 5px
+  //border: 2px solid transparent
   box-sizing: border-box
   cursor: pointer
+  vertical-align: middle
 
   //&[for="body-salmon"]
   //  background-color: $body-salmon
@@ -38,77 +99,52 @@
   .filter-label[for="#{$key}"]
     background-color: $value
 
-#body-color:target
-  ~ .filter
-    .filter-label-body-color
-      display: inline-block
-    .fitler-body-color
-      border-color: $pink
 
-#beak-color:target
-  ~ .filter
-    .filter-label-beak-color
-      display: inline-block
-    .filter-beak-color
-      border-color: $pink
+//#body-salmon:checked
+//  ~ .filter
+//    .filter-second-level
+//      label[for="body-salmon"]
+//        border-color: $pink
+//
+//#body-misty-rose:checked
+//  ~ .filter
+//    .filter-second-level
+//      label[for="body-misty-rose"]
+//        border-color: $pink
 
-#leggs-color:target
-  ~ .filter
-    .filter-label-leggs-color
-      display: inline-block
-    .filter-leggs-color
-      border-color: $pink
 
-.filter-first-level 
-  bottom: 0
-  background-color: white
-  white-space: nowrap
-  width: 100%
-  overflow: scroll
-  padding: 0 10px
-  a
-    display: inline-block
+.second-level-option-checked
+  width: 40px
+  height: 40px
 
-.filter-first-level-option
-  border-bottom: 3px solid $grey-light
-
-.filter-second-level 
-  background-color: $pink-light
-  width: 100%
-  padding: 0px 10px
-
-#body-salmon:checked
-  ~ .filter
-    .filter-second-level
-      label[for="body-salmon"]
-        border-color: $pink
-
-#body-misty-rose:checked
-  ~ .filter
-    .filter-second-level
-      label[for="body-misty-rose"]
-        border-color: $pink
+// Radio checked
+@each $key, $value in $body-colors
+  ##{$key}:checked
+    ~ .filter
+      .filter-second-level
+        label[for="#{$key}"]
+          @extend .second-level-option-checked
 
 #beak-brown:checked
   ~ .filter
     .filter-second-level
       label[for="beak-brown"]
-        border-color: $pink
+        @extend .second-level-option-checked
 
 #beak-rosy-brown:checked
   ~ .filter
     .filter-second-level
       label[for="beak-rosy-brown"]
-        border-color: $pink
+        @extend .second-level-option-checked
 
 #leggs-beige:checked
   ~ .filter
     .filter-second-level
       label[for="leggs-beige"]
-        border-color: $pink
+        @extend .second-level-option-checked
 
 #leggs-salmon:checked
   ~ .filter
     .filter-second-level
       label[for="leggs-salmon"]
-        border-color: $pink
+        @extend .second-level-option-checked

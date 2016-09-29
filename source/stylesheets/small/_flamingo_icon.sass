@@ -1,16 +1,27 @@
 .flamingo-icon
-  height: 60px
-  width: 60px
   display: block
   text-align: center
-  padding: 10px 10px 5px 10px
+  padding: 10px 10px 8px 10px
+  position: relative
+  background-color: white
+  &:after
+    content: ' '
+    width: 20px
+    height: 20px
+    display: block
+    background-color: red
+    position: absolute
+    left: 7vh 
+    transform: rotate(45deg)
+    background-color: $pink
+    display: none
 
 #flamingo-icon-svg
   height: 100%
 
 .flamingo-icon-body-color
   .sti3
-    fill: #000
+    fill: $grey-dark
   .sti1,
   .sti2,
   .sti0
@@ -27,7 +38,7 @@
 .flamingo-icon-leggs-color
   .sti0
     fill-opcaity: 0
-    fill: #000
+    fill: $grey-dark
   .sti1,
   .sti3,
   .sti2
