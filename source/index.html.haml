@@ -2,18 +2,18 @@
 title: Welcome to Middleman
 ---
 
-%input.filter-input#blue{ name: 'body-color', type: 'radio', value: 'blue' }
-%input.filter-input#red{ name: 'body-color', type: 'radio', value: 'red' }
+%input.filter-input#body-salmon{ name: 'body-color', type: 'radio', value: 'body-salmon' }
+%input.filter-input#body-misty-rose{ name: 'body-color', type: 'radio', value: 'body-misty-rose' }
 
-%input.filter-input#orange{ name: 'beak-color', type: 'radio', value: 'blue' }
-%input.filter-input#green{ name: 'beak-color', type: 'radio', value: 'red' }
+%input.filter-input#beak-brown{ name: 'beak-color', type: 'radio', value: 'beak-brown' }
+%input.filter-input#beak-rosy-brown{ name: 'beak-color', type: 'radio', value: '' }
 
-%input.filter-input#orange{ name: 'legg-color', type: 'radio', value: 'blue' }
-%input.filter-input#green{ name: 'legg-color', type: 'radio', value: 'red' }
+%input.filter-input#leggs-beige{ name: 'leggs-color', type: 'radio', value: 'leggs-beige' }
+%input.filter-input#leggs-salmon{ name: 'leggs-color', type: 'radio', value: 'leggs-salmon' }
 
 #body-color
 #beak-color
-#legg-color
+#leggs-color
 .filter
   .filter-first-level
     %a.flamingo-icon.flamingo-icon-body-color.filter-first-level-option.fitler-body-color{ href: '#body-color', title: I18n.t('.change-body-color') }
@@ -22,22 +22,23 @@ title: Welcome to Middleman
     %a.flamingo-icon.flamingo-icon-beak-color.filter-first-level-option.filter-beak-color{ href: '#beak-color', title: I18n.t('.change-beak-color') }
       = svg('flamingo_icon')
 
-    %a.flamingo-icon.flamingo-icon-legg-color.filter-first-level-option.filter-legg-color{ href: '#legg-color', title: I18n.t('.change-beak-color') }
+    %a.flamingo-icon.flamingo-icon-leggs-color.filter-first-level-option.filter-leggs-color{ href: '#leggs-color', title: I18n.t('.change-beak-color') }
       = svg('flamingo_icon')
 
   .filter-second-level
-    %label.filter-label.filter-label-body-color{ for: 'blue' } Blue
-    %label.filter-label.filter-label-body-color{ for: 'red' } Red
+    %label.filter-label.filter-label-body-color{ for: 'body-salmon' } Salmon
+    %label.filter-label.filter-label-body-color{ for: 'body-misty-rose' } MistyRose
 
   .filter-second-level
-    %label.filter-label.filter-label-beak-color{ for: 'orange' } Orange
-    %label.filter-label.filter-label-beak-color{ for: 'green' } Green
+    %label.filter-label.filter-label-beak-color{ for: 'beak-brown' } Brown
+    %label.filter-label.filter-label-beak-color{ for: 'beak-rosy-brown' } RosyBrown 
 
   .filter-second-level
-    %label.filter-label.filter-label-legg-color{ for: 'dumdidum' } dumdium
-    %label.filter-label.filter-label-legg-color{ for: 'asdf' } asdf
+    %label.filter-label.filter-label-leggs-color{ for: 'leggs-beige' } beige 
+    %label.filter-label.filter-label-leggs-color{ for: 'leggs-salmon' } salmon
 
-= svg('flamingo')
+#flamingo
+  = svg('flamingo')
 <a href="http://www.freepik.com/free-vector/pack-of-tropical-birds_867951.htm">Designed by Freepik</a>
 
 

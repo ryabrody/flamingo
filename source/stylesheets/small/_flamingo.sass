@@ -1,2 +1,63 @@
 #flamingo
-  height: 80vh
+  border: 30px solid $pink-light
+  padding: 10px
+  margin: 10px
+#flamingo-svg
+  height: 50vh
+  width: 100%
+
+#body-salmon:checked
+  ~ #flamingo
+    .st2
+      fill: $body-salmon
+    .st3
+      fill: $body-salmon-dark
+    .st4
+      fill: $body-salmon-light
+
+#body-misty-rose:checked
+  ~ #flamingo
+    .st2
+      fill: $body-misty-rose
+    .st3
+      fill: $body-misty-rose-dark
+    .st4
+      fill: $body-misty-rose-light
+
+#beak-brown:checked
+  ~ #flamingo
+    .st6
+      fill: $beak-brown-light
+    .st8
+      fill: $beak-brown
+
+#beak-rosy-brown:checked
+  ~ #flamingo
+    .st6
+      fill: $beak-rosy-brown-light
+    .st8
+      fill: $beak-rosy-brown
+
+#leggs-beige:checked
+  ~ #flamingo
+    .st0
+      fill: $leggs-beige-light
+    .st1
+      fill: $leggs-beige
+
+#leggs-salmon:checked
+  ~ #flamingo
+    .st0
+      fill: $leggs-salmon-light
+    .st1
+      fill: $leggs-salmon
+
+// linker fuss: st0
+// rechter fuss: st1
+// body mittel hell: st2
+// body dunkel : st3
+// body hell : st4
+// weiss : st5
+// schnabel schwarz hell: st6
+// schnabel weiss dunkel: st7
+// schnabel schwarz dunkel: st8
