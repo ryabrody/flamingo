@@ -2,27 +2,38 @@
   border: 30px solid $pink-light
   padding: 10px
   margin: 10px
+
 #flamingo-svg
   height: 50vh
   width: 100%
 
-#body-salmon:checked
-  ~ #flamingo
-    .st2
-      fill: $body-salmon
-    .st3
-      fill: $body-salmon-dark
-    .st4
-      fill: $body-salmon-light
+@each $key, $value in $body-colors
+  ##{$key}:checked
+    ~ #flamingo
+      .st2
+        fill: #{$value}
+      .st3
+        @extend .#{$key}-dark
+      .st4
+        @extend .#{$key}-light
 
-#body-misty-rose:checked
-  ~ #flamingo
-    .st2
-      fill: $body-misty-rose
-    .st3
-      fill: $body-misty-rose-dark
-    .st4
-      fill: $body-misty-rose-light
+//#body-salmon:checked
+//  ~ #flamingo
+//    .st2
+//      fill: $body-salmon
+//    .st3
+//      fill: $body-salmon-dark
+//    .st4
+//      fill: $body-salmon-light
+
+//#body-misty-rose:checked
+//  ~ #flamingo
+//    .st2
+//      fill: $body-misty-rose
+//    .st3
+//      fill: $body-misty-rose-dark
+//    .st4
+//      fill: $body-misty-rose-light
 
 #beak-brown:checked
   ~ #flamingo

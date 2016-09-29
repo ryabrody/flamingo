@@ -1,0 +1,16 @@
+// need to define mixins for dark an light because 
+// sass does not support interpolation to property-values
+// which should end as a variable
+
+$body-salmon-dark: #ffd0cd;
+.body-salmon-dark { fill: #ffd0cd;}
+.body-salmon-light { fill: #feeceb;}
+
+$body-misty-rose: #f1b5b5;
+.body-misty-rose-dark { fill: #f0a2a2; }
+.body-misty-rose-light { fill: #f0caca; }
+
+$body-colors: (
+  body-salmon: $body-salmon,
+  body-misty-rose: $body-misty-rose
+)

@@ -1,5 +1,6 @@
 require 'base64'
 require 'pry'
+require_relative 'source/extensions/sass_variable'
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -31,6 +32,8 @@ helpers do
     File.read("#{root}/source/images/#{name}.svg")
   end
 end
+
+activate :sass_variable
 
 # Build-specific configuration
 configure :build do

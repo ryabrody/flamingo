@@ -2,8 +2,11 @@
 title: Welcome to Middleman
 ---
 
-%input.filter-input#body-salmon{ name: 'body-color', type: 'radio', value: 'body-salmon' }
-%input.filter-input#body-misty-rose{ name: 'body-color', type: 'radio', value: 'body-misty-rose' }
+//%input.filter-input#body-salmon{ name: 'body-color', type: 'radio', value: 'body-salmon' }
+//%input.filter-input#body-misty-rose{ name: 'body-color', type: 'radio', value: 'body-misty-rose' }
+- sass_variable('small/_colors', 'body-colors').each do |body_color|
+  %input.filter-input{ id: body_color.key, name: 'body-color', type: 'radio', value: body_color.key }
+
 
 %input.filter-input#beak-brown{ name: 'beak-color', type: 'radio', value: 'beak-brown' }
 %input.filter-input#beak-rosy-brown{ name: 'beak-color', type: 'radio', value: '' }
@@ -26,8 +29,9 @@ title: Welcome to Middleman
       = svg('flamingo_icon')
 
   .filter-second-level
-    %label.filter-label.filter-label-body-color{ for: 'body-salmon' } Salmon
-    %label.filter-label.filter-label-body-color{ for: 'body-misty-rose' } MistyRose
+    - sass_variable('small/_colors', 'body-colors').each do |body_color|
+      %label.filter-label.filter-label-body-color{ for: body_color.key } body_color
+
 
   .filter-second-level
     %label.filter-label.filter-label-beak-color{ for: 'beak-brown' } Brown

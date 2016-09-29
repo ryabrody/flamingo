@@ -18,18 +18,25 @@
   box-sizing: border-box
   cursor: pointer
 
-  &[for="body-salmon"]
-    background-color: $body-salmon
-  &[for="body-misty-rose"]
-    background-color: $body-misty-rose
+  //&[for="body-salmon"]
+  //  background-color: $body-salmon
+  //&[for="body-misty-rose"]
+  //  background-color: $body-misty-rose
+
   &[for="beak-brown"]
     background-color: $beak-brown
   &[for="beak-rosy-brown"]
     background-color: $beak-rosy-brown
+
+
   &[for="leggs-beige"]
     background-color: $leggs-beige
   &[for="leggs-salmon"]
     background-color: $leggs-salmon
+
+@each $key, $value in $body-colors
+  .filter-label[for="#{$key}"]
+    background-color: $value
 
 #body-color:target
   ~ .filter
