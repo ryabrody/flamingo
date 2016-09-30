@@ -36,18 +36,18 @@ $beak-grey: #c2b6b6;
 $beak-khaki: #8d8555;
 .beak-khaki-light { fill: #a29a6a; }
 
-//leggs
-$leggs-beige: #f1e1e1;
-.leggs-beige-light { fill: #fceded; }
+//legs
+$legs-beige: #f1e1e1;
+.legs-beige-light { fill: #fceded; }
 
-$leggs-salmon: #f9c8b8;
-.leggs-salmon-light { fill: #fadad0; }
+$legs-salmon: #f9c8b8;
+.legs-salmon-light { fill: #fadad0; }
 
-$leggs-grey: #736d71;
-.leggs-grey-light { fill: #959194; }
+$legs-grey: #736d71;
+.legs-grey-light { fill: #959194; }
 
-$leggs-blue: #254167;
-.leggs-blue-light { fill: #3b5a83; }
+$legs-blue: #254167;
+.legs-blue-light { fill: #3b5a83; }
 
 $body-colors: (
   body-salmon: $body-salmon,
@@ -64,9 +64,9 @@ $beak-colors: (
   beak-khaki: $beak-khaki
 );
 
-$leggs-colors: (
-  leggs-beige: $leggs-beige,
-  leggs-salmon: $leggs-salmon,
-  leggs-grey: $leggs-grey,
-  leggs-blue: $leggs-blue
+$legs-colors: (
+  legs-beige: $legs-beige,
+  legs-salmon: $legs-salmon,
+  legs-grey: $legs-grey,
+  legs-blue: $legs-blue
 )

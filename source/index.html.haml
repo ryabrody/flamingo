@@ -7,12 +7,12 @@ title: <3 Not all flamingos are pink
 - sass_variable('small/_colors', 'beak-colors').each do |beak_color|
   %input.filter-input{ id: beak_color.key, title: "Change beak color to #{beak_color}", name: 'beak-color', type: 'radio', value: beak_color.key }
 
-- sass_variable('small/_colors', 'leggs-colors').each do |leggs_color|
-  %input.filter-input{ id: leggs_color.key,title: "Change leggs color to #{leggs_color}", name: 'leggs-color', type: 'radio', value: leggs_color.key }
+- sass_variable('small/_colors', 'legs-colors').each do |legs_color|
+  %input.filter-input{ id: legs_color.key,title: "Change legs color to #{legs_color}", name: 'legs-color', type: 'radio', value: legs_color.key }
 
 #body-color
 #beak-color
-#leggs-color
+#legs-color
 .filter
   .filter-first-level
     %a.flamingo-icon.flamingo-icon-body-color.filter-first-level-option.fitler-body-color{ tabindex: 1, href: '#body-color', title: 'Change feather color of flamingo' }
@@ -21,7 +21,7 @@ title: <3 Not all flamingos are pink
     %a.flamingo-icon.flamingo-icon-beak-color.filter-first-level-option.filter-beak-color{ tabindex: 20, href: '#beak-color', title: 'Change beak color of flamingo' }
       = svg('flamingo_icon')
 
-    %a.flamingo-icon.flamingo-icon-leggs-color.filter-first-level-option.filter-leggs-color{ tabindex: 30, href: '#leggs-color', title: 'Change leggs color of flamingo' }
+    %a.flamingo-icon.flamingo-icon-legs-color.filter-first-level-option.filter-legs-color{ tabindex: 30, href: '#legs-color', title: 'Change legs color of flamingo' }
       = svg('flamingo_icon')
 
   .filter-second-level
@@ -33,8 +33,8 @@ title: <3 Not all flamingos are pink
       %label.filter-label.filter-label-beak-color{ tabindex: i + 20, for: beak_color.key, title: "Change feather color to #{beak_color}" } beak_color
 
   .filter-second-level
-    - sass_variable('small/_colors', 'leggs-colors').each_with_index do |leggs_color, i|
-      %label.filter-label.filter-label-leggs-color{ tabindex: i + 30, for: leggs_color.key, title: "Change feather color to #{leggs_color}" } leggs_color
+    - sass_variable('small/_colors', 'legs-colors').each_with_index do |legs_color, i|
+      %label.filter-label.filter-label-legs-color{ tabindex: i + 30, for: legs_color.key, title: "Change feather color to #{legs_color}" } legs_color
 
 #flamingo
   = svg('flamingo')

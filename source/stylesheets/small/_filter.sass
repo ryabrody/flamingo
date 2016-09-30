@@ -34,11 +34,11 @@
     .filter-beak-color
       @extend .filter-first-level-option-target
 
-#leggs-color:target
+#legs-color:target
   ~ .filter
-    .filter-label-leggs-color
+    .filter-label-legs-color
       display: inline-block
-    .filter-leggs-color
+    .filter-legs-color
       @extend .filter-first-level-option-target
 
 .filter-first-level 
@@ -87,7 +87,7 @@
   .filter-label[for="#{$key}"]
     background-color: $value
 
-@each $key, $value in $leggs-colors
+@each $key, $value in $legs-colors
   .filter-label[for="#{$key}"]
     background-color: $value
 
@@ -109,7 +109,7 @@
         label[for="#{$key}"]
           @extend .second-level-option-checked
 
-@each $key, $value in $leggs-colors
+@each $key, $value in $legs-colors
   ##{$key}:checked
     ~ .filter
       .filter-second-level
