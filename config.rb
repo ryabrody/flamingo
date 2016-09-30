@@ -29,7 +29,7 @@ page '/*.txt', layout: false
 helpers do
   def svg(name)
     root = Middleman::Application.root
-    File.read("#{root}/source/images/#{name}.svg")
+    File.read("#{root}/source/svgs/#{name}.svg")
   end
 end
 
