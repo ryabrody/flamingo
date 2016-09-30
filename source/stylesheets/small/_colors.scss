@@ -11,6 +11,17 @@ $body-misty-rose: #f1b5b5;
 .body-misty-rose-dark { fill: #f0a2a2; }
 .body-misty-rose-light { fill: #f0caca; }
 
+$body-grey: #93939b;
+.body-grey-dark { fill: #82828a; }
+.body-grey-light { fill: #a3a3ac; }
+
+$body-green: #aab7ae;
+.body-green-dark { fill: #96a39a; }
+.body-green-light { fill: #bfcdc4; }
+
+$body-blue: #4a4a89;
+.body-blue-dark { fill: #353568; }
+.body-blue-light { fill: #6666a8; }
 
 // beak
 $beak-brown: #423316;
@@ -40,7 +51,10 @@ $leggs-blue: #254167;
 
 $body-colors: (
   body-salmon: $body-salmon,
-  body-misty-rose: $body-misty-rose
+  body-misty-rose: $body-misty-rose,
+  body-grey: $body-grey,
+  body-green: $body-green,
+  body-blue: $body-blue
 );
 
 $beak-colors: (
