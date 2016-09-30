@@ -16,58 +16,28 @@
       .st4
         @extend .#{$key}-light
 
-//#body-salmon:checked
-//  ~ #flamingo
-//    .st2
-//      fill: $body-salmon
-//    .st3
-//      fill: $body-salmon-dark
-//    .st4
-//      fill: $body-salmon-light
+@each $key, $value in $beak-colors
+  ##{$key}:checked
+    ~ #flamingo
+      .st6
+        @extend .#{$key}-light
+      .st8
+        fill: #{$value}
 
-//#body-misty-rose:checked
-//  ~ #flamingo
-//    .st2
-//      fill: $body-misty-rose
-//    .st3
-//      fill: $body-misty-rose-dark
-//    .st4
-//      fill: $body-misty-rose-light
+@each $key, $value in $leggs-colors
+  ##{$key}:checked
+    ~ #flamingo
+      .st0
+        @extend .#{$key}-light
+      .st1
+        fill: #{$value}
 
-#beak-brown:checked
-  ~ #flamingo
-    .st6
-      fill: $beak-brown-light
-    .st8
-      fill: $beak-brown
-
-#beak-rosy-brown:checked
-  ~ #flamingo
-    .st6
-      fill: $beak-rosy-brown-light
-    .st8
-      fill: $beak-rosy-brown
-
-#leggs-beige:checked
-  ~ #flamingo
-    .st0
-      fill: $leggs-beige-light
-    .st1
-      fill: $leggs-beige
-
-#leggs-salmon:checked
-  ~ #flamingo
-    .st0
-      fill: $leggs-salmon-light
-    .st1
-      fill: $leggs-salmon
-
-// linker fuss: st0
-// rechter fuss: st1
-// body mittel hell: st2
-// body dunkel : st3
-// body hell : st4
-// weiss : st5
-// schnabel schwarz hell: st6
-// schnabel weiss dunkel: st7
-// schnabel schwarz dunkel: st8
+// left feet: st0
+// right feet: st1
+// body medium: st2
+// body dark: st3
+// body bright: st4
+// width: st5
+// beak grey: st6
+// beak white: st7
+// beak black: st8

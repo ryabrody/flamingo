@@ -1,6 +1,8 @@
 // need to define mixins for dark an light because 
 // sass does not support interpolation to property-values
 // which should end as a variable
+
+// body
 $body-salmon: #ffdedc;
 .body-salmon-dark { fill: #ffd0cd;}
 .body-salmon-light { fill: #feeceb;}
@@ -9,7 +11,48 @@ $body-misty-rose: #f1b5b5;
 .body-misty-rose-dark { fill: #f0a2a2; }
 .body-misty-rose-light { fill: #f0caca; }
 
+
+// beak
+$beak-brown: #423316;
+.beak-brown-light { fill: #564729; }
+
+$beak-rosy-brown: #8c7676;
+.beak-rosy-brown-light { fill: #a59595; }
+
+$beak-grey: #c2b6b6;
+.beak-grey-light { fill: #d5cece; }
+
+$beak-khaki: #8d8555;
+.beak-khaki-light { fill: #a29a6a; }
+
+//leggs
+$leggs-beige: #f1e1e1;
+.leggs-beige-light { fill: #fceded; }
+
+$leggs-salmon: #f9c8b8;
+.leggs-salmon-light { fill: #fadad0; }
+
+$leggs-grey: #736d71;
+.leggs-grey-light { fill: #959194; }
+
+$leggs-blue: #254167;
+.leggs-blue-light { fill: #3b5a83; }
+
 $body-colors: (
   body-salmon: $body-salmon,
   body-misty-rose: $body-misty-rose
+);
+
+$beak-colors: (
+  beak-brown: $beak-brown,
+  beak-rosy-brown: $beak-rosy-brown,
+  beak-grey: $beak-grey,
+  beak-khaki: $beak-khaki
+);
+
+$leggs-colors: (
+  leggs-beige: $leggs-beige,
+  leggs-salmon: $leggs-salmon,
+  leggs-grey: $leggs-grey,
+  leggs-blue: $leggs-blue
 )

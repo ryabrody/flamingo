@@ -37,8 +37,18 @@ activate :sass_variable
 
 # Build-specific configuration
 configure :build do
+  activate :relative_assets
   activate :minify_css
   activate :minify_javascript
   activate :minify_html
   activate :gzip
+
+  activate :deploy do |deploy|
+    deploy.deploy_method = :git
+    # deploy.remote = 'custom-remote' # remote name or git url, default: origin
+    # deploy.branch = 'custom-branch' # default: gh-pages
+    # deploy.strategy = :force_push # commit strategy: can be :force_push or :submodule, default: :force_push
+    deploy.commit_message = 'automated commit by middleman deployment'
+  end
 end
+

@@ -1,103 +1,48 @@
 ---
 title: Not all flamingos are pink
 ---
-
-//%input.filter-input#body-salmon{ name: 'body-color', type: 'radio', value: 'body-salmon' }
-//%input.filter-input#body-misty-rose{ name: 'body-color', type: 'radio', value: 'body-misty-rose' }
 - sass_variable('small/_colors', 'body-colors').each do |body_color|
-  %input.filter-input{ id: body_color.key, name: 'body-color', type: 'radio', value: body_color.key }
+  %input.filter-input{ id: body_color.key, title: "Change feather color to #{body_color}", name: 'body-color', type: 'radio', value: body_color.key }
 
+- sass_variable('small/_colors', 'beak-colors').each do |beak_color|
+  %input.filter-input{ id: beak_color.key, title: "Change beak color to #{beak_color}", name: 'beak-color', type: 'radio', value: beak_color.key }
 
-%input.filter-input#beak-brown{ name: 'beak-color', type: 'radio', value: 'beak-brown' }
-%input.filter-input#beak-rosy-brown{ name: 'beak-color', type: 'radio', value: '' }
-
-%input.filter-input#leggs-beige{ name: 'leggs-color', type: 'radio', value: 'leggs-beige' }
-%input.filter-input#leggs-salmon{ name: 'leggs-color', type: 'radio', value: 'leggs-salmon' }
+- sass_variable('small/_colors', 'leggs-colors').each do |leggs_color|
+  %input.filter-input{ id: leggs_color.key,title: "Change leggs color to #{leggs_color}", name: 'leggs-color', type: 'radio', value: leggs_color.key }
 
 #body-color
 #beak-color
 #leggs-color
 .filter
   .filter-first-level
-    %a.flamingo-icon.flamingo-icon-body-color.filter-first-level-option.fitler-body-color{ href: '#body-color', title: I18n.t('.change-body-color') }
+    %a.flamingo-icon.flamingo-icon-body-color.filter-first-level-option.fitler-body-color{ tabindex: 1, href: '#body-color', title: 'Change feather color of flamingo' }
       = svg('flamingo_icon')
 
-    %a.flamingo-icon.flamingo-icon-beak-color.filter-first-level-option.filter-beak-color{ href: '#beak-color', title: I18n.t('.change-beak-color') }
+    %a.flamingo-icon.flamingo-icon-beak-color.filter-first-level-option.filter-beak-color{ tabindex: 20, href: '#beak-color', title: 'Change beak color of flamingo' }
       = svg('flamingo_icon')
 
-    %a.flamingo-icon.flamingo-icon-leggs-color.filter-first-level-option.filter-leggs-color{ href: '#leggs-color', title: I18n.t('.change-beak-color') }
+    %a.flamingo-icon.flamingo-icon-leggs-color.filter-first-level-option.filter-leggs-color{ tabindex: 30, href: '#leggs-color', title: 'Change leggs color of flamingo' }
       = svg('flamingo_icon')
 
   .filter-second-level
-    - sass_variable('small/_colors', 'body-colors').each do |body_color|
-      %label.filter-label.filter-label-body-color{ for: body_color.key } body_color
-
-
-  .filter-second-level
-    %label.filter-label.filter-label-beak-color{ for: 'beak-brown' } Brown
-    %label.filter-label.filter-label-beak-color{ for: 'beak-rosy-brown' } RosyBrown 
+    - sass_variable('small/_colors', 'body-colors').each_with_index do |body_color, i|
+      %label.filter-label.filter-label-body-color{ tabindex: i + 1, for: body_color.key, title: "Change feather color to #{body_color}" } body_color
 
   .filter-second-level
-    %label.filter-label.filter-label-leggs-color{ for: 'leggs-beige' } beige 
-    %label.filter-label.filter-label-leggs-color{ for: 'leggs-salmon' } salmon
+    - sass_variable('small/_colors', 'beak-colors').each_with_index do |beak_color, i|
+      %label.filter-label.filter-label-beak-color{ tabindex: i + 20, for: beak_color.key, title: "Change feather color to #{beak_color}" } beak_color
+
+  .filter-second-level
+    - sass_variable('small/_colors', 'leggs-colors').each_with_index do |leggs_color, i|
+      %label.filter-label.filter-label-leggs-color{ tabindex: i + 30, for: leggs_color.key, title: "Change feather color to #{leggs_color}" } leggs_color
 
 #flamingo
   = svg('flamingo')
-  %a.a{ href: 'http://www.freepik.com/free-vector/pack-of-tropical-birds_867951.htm' }
-    Designed by Freepik
 
+%p.quote
+  Be a flamingo in a flock of pigeons.
 
+%a.link-freepik{ href: 'http://www.freepik.com/free-vector/pack-of-tropical-birds_867951.htm', title: 'Go to the page which designed the flamingo' }
+  Flamingo by Freepik
 
-//%br
-//%br
-//%br
-//%br
-//%br
-//%br
-//%br
-//%br
-//// linker fuss: st0
-//// rechter fuss: st1
-//// body mittel hell: st2
-//// body dunkel : st3
-//// body hell : st4
-//// weiss : st5
-//// schnabel schwarz hell: st6
-//// schnabel weiss dunkel: st7
-//// schnabel schwarz dunkel: st7
-//
-//
-//
-//.container
-//  %label{ for: 'male' } Male
-//  %label{ for: 'female' } Female
-//
-//%input#male{ name: 'gender', type: 'radio', value: 'male' }
-//%br
-//%input#female{ name: 'gender', type: 'radio', value: 'female' }
-//%br
-//= svg('circle')
-//
-//:css
-//  #dumdidum:checked ~ h1 {
-//    color: orange;
-//  }
-//
-//
-////%input#dumdidum{ name: 'dumdidum', type: 'checkbox', value: 'dumdidum' }
-////%h1 Middleman is Running
-////= Base64.encode64(File.read("#{Middleman::Application.root}/source/images/example.svg"))
-//////%img{ src: "data:image/svg+xml; #{)}" }
-//  
-//
-//%input{value: 'asdf'}
-//%input{value: ''}
-//
-//%form{ action: '#svg-circle', method: 'get' }
-//  %input{value: 'asdf'}
-//  %input{ type: 'submit' }
-//
-//%form{:action => "#", :method => "get"}
-//  %input#female{ name: 'gender', type: 'radio', value: 'female' }
-//  %input{:name => "VARIABLE", :type => "text", :value => "VALUE"}
-//  %input{:type => "submit", :value => "submit"}/
+%a.link-start{ href: '/', title: 'Go back to the start' } Start

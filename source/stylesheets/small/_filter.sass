@@ -9,8 +9,8 @@
 
 .filter-first-level-option
   display: inline-block
-  vertical-align: middle
-  
+  vertical-align: bottom
+  transition: height 0.5s
 
 .filter-first-level-option-target
   height: 15vh
@@ -65,59 +65,36 @@
   text-align: center
   box-sizing: border-box
 
-
 .filter-label
   display: none
   border-radius: 1000px 1000px
-  color: transparent
+  color: black
+  text-indent: 999px
+  overflow: hidden
   width: 30px
   height: 30px
   background-color: black
   margin: 5px
-  //border: 2px solid transparent
   box-sizing: border-box
   cursor: pointer
   vertical-align: middle
-
-  //&[for="body-salmon"]
-  //  background-color: $body-salmon
-  //&[for="body-misty-rose"]
-  //  background-color: $body-misty-rose
-
-  &[for="beak-brown"]
-    background-color: $beak-brown
-  &[for="beak-rosy-brown"]
-    background-color: $beak-rosy-brown
-
-
-  &[for="leggs-beige"]
-    background-color: $leggs-beige
-  &[for="leggs-salmon"]
-    background-color: $leggs-salmon
 
 @each $key, $value in $body-colors
   .filter-label[for="#{$key}"]
     background-color: $value
 
+@each $key, $value in $beak-colors
+  .filter-label[for="#{$key}"]
+    background-color: $value
 
-//#body-salmon:checked
-//  ~ .filter
-//    .filter-second-level
-//      label[for="body-salmon"]
-//        border-color: $pink
-//
-//#body-misty-rose:checked
-//  ~ .filter
-//    .filter-second-level
-//      label[for="body-misty-rose"]
-//        border-color: $pink
-
+@each $key, $value in $leggs-colors
+  .filter-label[for="#{$key}"]
+    background-color: $value
 
 .second-level-option-checked
   width: 40px
   height: 40px
 
-// Radio checked
 @each $key, $value in $body-colors
   ##{$key}:checked
     ~ .filter
@@ -125,26 +102,16 @@
         label[for="#{$key}"]
           @extend .second-level-option-checked
 
-#beak-brown:checked
-  ~ .filter
-    .filter-second-level
-      label[for="beak-brown"]
-        @extend .second-level-option-checked
+@each $key, $value in $beak-colors
+  ##{$key}:checked
+    ~ .filter
+      .filter-second-level
+        label[for="#{$key}"]
+          @extend .second-level-option-checked
 
-#beak-rosy-brown:checked
-  ~ .filter
-    .filter-second-level
-      label[for="beak-rosy-brown"]
-        @extend .second-level-option-checked
-
-#leggs-beige:checked
-  ~ .filter
-    .filter-second-level
-      label[for="leggs-beige"]
-        @extend .second-level-option-checked
-
-#leggs-salmon:checked
-  ~ .filter
-    .filter-second-level
-      label[for="leggs-salmon"]
-        @extend .second-level-option-checked
+@each $key, $value in $leggs-colors
+  ##{$key}:checked
+    ~ .filter
+      .filter-second-level
+        label[for="#{$key}"]
+          @extend .second-level-option-checked

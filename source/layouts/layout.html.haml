@@ -1,10 +1,11 @@
 !!!
-%html
+%html{ lang: 'en' }
   %head
     %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type'}
     %meta{ content: 'IE=edge', 'http-equiv' => 'X-UA-Compatible'}
     %meta{ charset: 'utf-8' }
     %meta{ content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no', name: 'viewport' }
+
     %title= current_page.data.title || 'Flamingo'
     = stylesheet_link_tag :application
     = javascript_include_tag :application
