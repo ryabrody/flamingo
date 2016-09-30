@@ -43,6 +43,9 @@ configure :build do
   activate :minify_html
   activate :gzip
 
+  ignore 'svgs/*'
+  ignore 'extensions/*'
+
   activate :deploy do |deploy|
     deploy.deploy_method = :git
     # deploy.remote = 'custom-remote' # remote name or git url, default: origin
